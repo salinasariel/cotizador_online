@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador - ARIEL SALINAS</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="./js/index.js" defer></script>
+</head>
+
+<body>
+    <div id="contenedorimg" class="product-image">
+        <img  src="./img/JBLs.png" alt="jbls" />
+    </div>
+    <div class="product-details">
+        <div class="product-details-content">
+            <h2>JBL FLIP 6</h2>
+            <form action="">
+                <div class="form-control">
+                    <label>Color</label>
+                    <select id="select" onchange="changeProductImage()">
+                        <option value="general"> -- Seleccione una opción -- </option>
+                        <option value="grey">Grey</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="Black">Black</option>
+                    </select>
+                </div>
+                <div class="form-control">
+                    <label>Cantidad</label>
+                    <input id="cant" type="number" />
+                </div>
+                <div class="form-control">
+                    <label>Cantidad de cuotas</label>
+                    <select id="cuotas">
+                        <option value="none" disabled selected value="0"> -- Seleccione una opción -- </option>
+                        <option id="1cuota" value="1">1 cuota</option>
+                        <option id="2cuota" value="6">6 cuotas</option>
+                        <option id="3cuota" value="12">12 cuotas</option>
+                    </select>
+                </div>                
+                <div class="form-control">
+                    <button type="button" onclick="calculatePrice()">Cotizar</button>
+                </div>
+                <div id="result" class="form-control">
+                    <p>.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
+
